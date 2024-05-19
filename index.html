@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floating Window with Blurred Background Image</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: url('background.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
 
+    .floating-window {
+        width: 70%;
+        max-width: 800px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .floating-window h1 {
+        font-size: 2em;
+    }
+
+    @supports ((-webkit-backdrop-filter: blur(5px)) or (backdrop-filter: blur(5px))) {
+        .floating-window {
+            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.5);
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="floating-window">
+        <h1>Welcome to my floating window!</h1>
+        <p>This is some sample text inside the floating window. You can add more content here.</p>
+    </div>
+</body>
+</html>
