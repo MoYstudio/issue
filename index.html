@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Floating Window with Blurred Background Image</title>
+<title>MoYstudio</title>
+<link rel="icon" href="https://pub-cdn-oss.chuangkit.com/design/2024/04/20/6b175af0-9271-4055-815f-4cbb81d92b48_thumb?v=416" sizes="16x16">
 <style>
     body {
         margin: 0;
@@ -13,13 +14,13 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        background: url('img/background.png') no-repeat center center fixed;
+        background: url("img/background.png") no-repeat center center fixed;
         background-size: cover;
     }
 
     .floating-window {
-        width: 70%;
-        max-width: 800px;
+        width: 100%;
+        max-width: 90%;
         padding: 20px;
         background: rgba(255, 255, 255, 0.8);
         border-radius: 10px;
@@ -38,12 +39,113 @@
             background: rgba(255, 255, 255, 0.5);
         }
     }
+
+    table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd7a;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd71;
+}
 </style>
 </head>
 <body>
+<div id="content-cn" style="display: none;">
     <div class="floating-window">
-        <h1>Welcome to my floating window!</h1>
-        <p>This is some sample text inside the floating window. You can add more content here.</p>
+        <h1>MoY工作室issue库提交规范条例(2024)</h1>
+        <h3>提出问题越规范，我们就会越懂你！————梓然</h3>
+        <h2>>>规范条例</h2>
+        <h4>· 请务必确保在“相同”版本内，从未有人提出过你所想要提出的问题；<br>
+            · 请填写所有的问题，没有要填的就填入“无”；<br>
+            · 请在填写时注意用语文明，禁止带有任何的种族、肤色等歧视；<br>
+            · 请在填写时注意不要透露个人隐私信息（姓名、电话号码、住址等等），<br><font color="red">忽视此项条例所造成的财产损失、人生伤害等，本工作室概不负责</font>；<br>
+            · 请不要在为他人解答问题时发送无帮助、不相关或违反第三、四条规范条例的言论；<br>
+            · 请务必耐心等待他人或管理员的回复，禁止在填写或评论中@管理员。
+        </h4>
+        <h2>>>处罚规则</h2>
+        <table>
+            <tr>
+              <th>违反条例</th>
+              <th>处罚<font color="red">（按情节严重程度而定）</font></th>
+            </tr>
+            <tr>
+              <td>一、二、六</td>
+              <td>提醒、警告、封禁</td>
+            </tr>
+            <tr>
+                <td>三</td>
+                <td>警告、删除、封禁</td>
+              </tr>
+              <tr>
+                <td>四</td>
+                <td>提醒、警告、删除</td>
+              </tr>
+              <tr>
+                <td>五</td>
+                <td>提醒、警告、删除、封禁</td>
+              </tr>
+          </table>
+          <h5><font color="gray">生效时间:发布日期开始</font></h5>
     </div>
+</div>
+
+<div id="content-en" style="display: none;">
+    <div class="floating-window">
+        <h1>MoY Studio Issue Repository Submission Specification Regulations (2024).</h1>
+        <h3>The more normative the questions, the more we will understand you! ———— zirran</h3>
+        <h2>>> norms and regulations</h2>
+        <h4>· It's important to make sure that no one has ever asked the question you want to ask in the "same" version; <br>
+            · Please fill in all the questions, and fill in "none" if there is no one to fill; <br>
+            · Please pay attention to the civilized language when filling in, and prohibit any discrimination such as race, skin color, etc.; <br>
+            · Please be careful not to disclose your personal privacy information (name, phone number, address, etc.) when filling in the form,<br> <font color="red", > we are not responsible for any property damage or personal injury caused by ignoring this regulation</font>; <br>
+            · Please refrain from sending unhelpful, irrelevant or non-compliant comments that violate rules and regulations 3 and 4 when answering questions for others; <br>
+            · Please be patient and wait for a reply from others or admins, and don't @admin in comments or comments.
+        </h4>
+        <h2>>> penalty rules</h2>
+        <table>
+            <tr>
+              <th>Violation of regulations</th>
+              <th>Penalty<font color="red"> (depending on the severity of the offense).</font></th>
+            </tr>
+            <tr>
+              <td>One, two, six</td>
+              <td>Reminders, warnings, bans</td>
+            </tr>
+            <tr>
+                <td>Three</td>
+                <td>Warnings, deletions, bans</td>
+              </tr>
+              <tr>
+                <td>Four</td>
+                <td>Reminders, warnings, deletions</td>
+              </tr>
+              <tr>
+                <td>Five</td>
+                <td>Reminders, warnings, deletions, bans</td>
+              </tr>
+          </table>
+          <h5><font color="gray"> Effective time: from the release date</font></h5>
+    </div>
+</div>
+
+<script>
+
+var userLang = navigator.language || navigator.userLanguage;
+
+
+if (userLang.indexOf('zh') === 0) {
+    document.getElementById('content-cn').style.display = 'block';
+} else {
+    document.getElementById('content-en').style.display = 'block';
+}
+</script>
 </body>
 </html>
